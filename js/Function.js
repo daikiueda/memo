@@ -4,9 +4,9 @@ describe( "Function", function(){
 
     describe( ".length", function(){
         it( "関数オブジェクトのlengthプロパティで、仮引数の数が取得できる。", function(){
-            expect( ( function(){} ).length ).equal( 0 );
-            expect( ( function( hoge ){} ).length ).equal( 1 );
-            expect( ( function( hoge, foo ){} ).length ).equal( 2 );
+            expect( ( function(){} ).length ).to.equal( 0 );
+            expect( ( function( hoge ){} ).length ).to.equal( 1 );
+            expect( ( function( hoge, foo ){} ).length ).to.equal( 2 );
         } );
     } );
 

@@ -15,5 +15,13 @@ describe( "String", function(){
         it( "2バイト文字でも同様。", function(){
             expect( "がぎぐげご".split( "" ).reverse().join( "" ) ).to.equal( "ごげぐぎが" );
         } );
+        
+        describe( "サロゲートペア文字の場合", function(){
+            it( ".length は1にならず、2になる。", function(){
+                expect( String.fromCharCode( 0xD842, 0xDFB7 ).split( "" ) )
+                    .not.to.have.length( 1 )
+                    .and.equal( 2 );
+            } );
+        } );
     } );
 } );

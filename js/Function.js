@@ -2,6 +2,25 @@ var expect = chai.expect;
 
 describe( "Function", function(){
 
+
+    describe( "arguments", function(){
+        it( "Array.prototype.slice.call( arguments )", function(){
+            var argTypes = ( function returnArgumentTypesArray(){
+                return Array.prototype.slice.call( arguments ).map( function( value ){ return typeof( value ); } );
+            } )( 1, "hoge", function(){} );
+
+            expect( argTypes ).to.eql( [ "number", "string", "function" ] );
+        } );
+
+        it( "[].slice.call( arguments )", function(){
+            var argTypes = ( function returnArgumentTypesArray(){
+                return [].slice.call( arguments ).map( function( value ){ return typeof( value ); } );
+            } )( 1, "hoge", function(){} );
+
+            expect( argTypes ).to.eql( [ "number", "string", "function" ] );
+        } );
+    } );
+
     describe( ".length", function(){
         it( "関数オブジェクトのlengthプロパティで、仮引数の数が取得できる。", function(){
             expect( ( function(){} ).length ).to.equal( 0 );

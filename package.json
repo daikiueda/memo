@@ -1,0 +1,24 @@
+{
+    "name": "memo",
+    "scripts": {
+        "test": "./node_modules/mocha/bin/_mocha js/*.js --ui bdd"
+    },
+    "devDependencies": {
+        "chai": "^1.9.1",
+        "mocha": "^1.18.2"
+    },
+    "testling": {
+        "browsers": [
+            "ie/6..latest",
+            "chrome/30..latest",
+            "firefox/20..latest",
+            "safari/5..latest",
+            "opera/latest",
+            "iphone/6",
+            "ipad/6",
+            "android-browser/latest"
+        ],
+        "harness": "mocha-bdd",
+        "files": "js/*.js"
+    }
+}

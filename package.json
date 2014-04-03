@@ -10,7 +10,7 @@
     "testling": {
         "browsers": [
             "ie/6..latest",
-            "chrome/30..latest",
+            "chrome/latest",
             "firefox/20..latest",
             "safari/5..latest",
             "opera/latest",

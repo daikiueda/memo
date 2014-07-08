@@ -25,4 +25,10 @@ describe( "String", function(){
             } );
         } );
     } );
+    
+    describe( '( new Array( n + 1 ) ).join( "Z" )', function(){
+        it( "任意の文字Zをn個繰り返した文字列ができる。", function(){
+            expect( ( new Array( 4 + 1 ) ).join( "Z" ) ).to.equal( "ZZZZ" );
+        } );
+    } );
 } );

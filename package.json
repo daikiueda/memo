@@ -1,7 +1,7 @@
 {
-  "name": "memo",
+  "name": "studies.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/_mocha js/*.js --ui bdd"
+    "test": "./node_modules/mocha/bin/_mocha"
   },
   "devDependencies": {
     "chai": "^1.9.1",
@@ -27,6 +27,6 @@
       "android-browser/latest"
     ],
     "harness": "mocha-bdd",
-    "files": "js/*.js"
+    "files": "test/*.js"
   }
 }

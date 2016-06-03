@@ -29,4 +29,16 @@ describe( "Scope", function(){
     		} )() ).to.equal( 1 );
     	} );
     } );
+
+    describe( "コンストラクタ関数の巻き上げ", function(){
+        // https://github.com/sindresorhus/multiline
+        it( "prototypeで定義されるメソッドは、定義前にnewされたインスタンスからは参照できない。", function(){
+            expect( ( new Hoge() ).fuga ).to.be.undefined;
+
+            function Hoge(){}
+            Hoge.prototype = {
+                fuga: function(){}
+            };
+        } );
+    } );
 } );

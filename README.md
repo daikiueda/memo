@@ -1,4 +1,4 @@
-studies.js
+studies.js [![Build Status](https://travis-ci.org/daikiueda/studies.js.svg?branch=master)](https://travis-ci.org/daikiueda/studies.js)
 ====
 
 <!--
